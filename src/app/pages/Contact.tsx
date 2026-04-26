@@ -34,8 +34,8 @@ export function Contact() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+95 9 262 214 177",
+      link: "tel:+959262214177",
     },
     {
       icon: <MapPin className="w-6 h-6" />,

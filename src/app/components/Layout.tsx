@@ -17,17 +17,17 @@ export function Layout() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white">
+    <div className="min-h-screen bg-[#0a0a0f] text-white bg-[url('/pattern.png')] bg-repeat">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-xl bg-[#0a0a0f]/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                <img src="/logo.png" alt="Zynext Solutions logo" className="w-6 h-6 object-contain" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-white" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                 Zynext Solutions
               </span>
             </Link>
@@ -40,19 +40,19 @@ export function Layout() {
                   to={link.path}
                   className={`relative transition-colors ${
                     isActive(link.path)
-                      ? "text-blue-400"
+                      ? "text-primary"
                       : "text-gray-300 hover:text-white"
                   }`}
                 >
                   {link.name}
                   {isActive(link.path) && (
-                    <span className="absolute -bottom-[21px] left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400" />
+                    <span className="absolute -bottom-[21px] left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-cyan-400" />
                   )}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+                className="px-6 py-2 bg-gradient-to-r from-primary to-cyan-500 rounded-full hover:shadow-lg hover:shadow-primary/50 transition-all"
               >
                 Get Started
               </Link>
@@ -109,10 +109,10 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">Z</span>
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                  <img src="/logo.png" alt="Zynext Solutions logo" className="w-6 h-6 object-contain" />
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="text-xl font-bold text-white" style={{ fontFamily: 'Orbitron, sans-serif' }}>
                   Zynext Solutions
                 </span>
               </div>
